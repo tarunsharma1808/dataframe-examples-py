@@ -10,11 +10,11 @@ def lambda_handler(event, context):
         'SlaveInstanceType': 'm3.xlarge',
         'InstanceCount': 2,
         'InstanceGroups': [],
-        'Ec2KeyName': 'spark',
+        'Ec2KeyName': 'test',
         'KeepJobFlowAliveWhenNoSteps': True,
         'TerminationProtected': False,
-        'Ec2SubnetId': 'subnet-b51b2fd3',
-        'EmrManagedMasterSecurityGroup': 'sg-00e712ec1b09f676e',
+        'Ec2SubnetId': 'subnet-c6756ba0',
+        'EmrManagedMasterSecurityGroup': 'sg-0b54ad19ed6d85c63',
         'EmrManagedSlaveSecurityGroup':  'sg-0e9ebbfd18d0669a8'
     }
 
@@ -41,7 +41,7 @@ def lambda_handler(event, context):
 
     response = client.run_job_flow(
         Name='PySpark Cluster',
-        LogUri='s3://aws-logs-788660014500-eu-west-1/emr-logs',
+        LogUri='s3://practicebuckettarun/emr-logs',
         ReleaseLabel='emr-5.30.0',
         Instances=instances,
         Configurations=configurations,
