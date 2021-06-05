@@ -16,7 +16,7 @@ db.students.insert({ "studentno":"2","firstname":"tarun","lastname":"sing","scho
 db.students.insert([{ "studentno":"3","firstname":"arun","lastname":"pal","school":"Modern"},
 { "studentno":"4","firstname":"sachin","lastname":"tiwari","school":"dps"},
 { "studentno":"5","firstname":"rahul","lastname":"negi","school":"nps"}])
-db.students..find()
+db.students.find()
 
 # Make this remote MongoDB instance accessible to your local machine
 ---------------------------------------

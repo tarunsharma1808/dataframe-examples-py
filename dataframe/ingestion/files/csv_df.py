@@ -72,3 +72,4 @@ if __name__ == '__main__':
     spark.stop()
 
 # spark-submit --packages "org.apache.hadoop:hadoop-aws:2.7.4" dataframe/ingestion/files/csv_df.py
+# spark-submit --packages org.apache.hadoop:hadoop-aws:2.7.4 csv_df.py
