@@ -6,6 +6,8 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo systemctl unmask mongodb
 
+# may get error that "apt-get : command not found", possible solution is using 'yum' instead of apt-get, not tested yet
+
 # Create a mongo doc
 ---------------------------------------
 mongo

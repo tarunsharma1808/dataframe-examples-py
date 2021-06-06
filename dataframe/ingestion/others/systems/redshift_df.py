@@ -1,7 +1,7 @@
 from pyspark.sql import SparkSession
 import yaml
 import os.path
-import utils.aws_utils as ut
+import aws_utils as ut
 
 if __name__ == '__main__':
 

@@ -47,3 +47,44 @@ if __name__ == '__main__':
     spark.stop()
 
 # spark-submit --packages "org.apache.hadoop:hadoop-aws:2.7.4" dataframe/ingestion/files/json_df.py
+
+'''
+root
+ |-- company: string (nullable = true)
+ |-- employees: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- firstName: string (nullable = true)
+ |    |    |-- lastName: string (nullable = true)
+
++--------+-------------------------------------+
+|company |employees                            |
++--------+-------------------------------------+
+|NewCo   |[[Sidhartha, Ray], [Pratik, Solanki]]|
+|FamilyCo|[[Jiten, Gupta], [Pallavi, Gupta]]   |
+|OldCo   |[[Vivek, Garg], [Nitin, Gupta]]      |
+|ClosedCo|[]                                   |
++--------+-------------------------------------+
+
++--------+-----------------+
+| company|         employee|
++--------+-----------------+
+|   NewCo| [Sidhartha, Ray]|
+|   NewCo|[Pratik, Solanki]|
+|FamilyCo|   [Jiten, Gupta]|
+|FamilyCo| [Pallavi, Gupta]|
+|   OldCo|    [Vivek, Garg]|
+|   OldCo|   [Nitin, Gupta]|
++--------+-----------------+
+
++--------+---------+
+| company| emp_name|
++--------+---------+
+|   NewCo|Sidhartha|
+|   NewCo|   Pratik|
+|FamilyCo|    Jiten|
+|FamilyCo|  Pallavi|
+|   OldCo|    Vivek|
+|   OldCo|    Nitin|
++--------+---------+
+
+'''

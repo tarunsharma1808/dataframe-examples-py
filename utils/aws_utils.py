@@ -13,3 +13,8 @@ def get_mysql_jdbc_url(mysql_config: dict):
     port = mysql_config["mysql_conf"]["port"]
     database = mysql_config["mysql_conf"]["database"]
     return "jdbc:mysql://{}:{}/{}?autoReconnect=true&useSSL=false".format(host, port, database)
+
+
+def some_func(parama, spark):
+    # do something
+    10

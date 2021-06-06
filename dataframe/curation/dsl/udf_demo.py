@@ -11,6 +11,10 @@ if __name__ == '__main__':
         .getOrCreate()
     spark.sparkContext.setLogLevel('ERROR')
 
+
+    from utils.aws_utils import *
+    some_func(10, spark)
+
     def initcap(line: str):
         lst = line.split(" ")
         return ' '.join(list(map(str.capitalize, lst)))

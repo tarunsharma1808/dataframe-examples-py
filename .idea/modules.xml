@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/dataframe-examples-py.iml" filepath="$PROJECT_DIR$/.idea/dataframe-examples-py.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/pythonProject/.idea/pythonProject.iml" filepath="$USER_HOME$/PycharmProjects/pythonProject/.idea/pythonProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../rdd-examples-master/.idea/rdd-examples-master.iml" filepath="$PROJECT_DIR$/../rdd-examples-master/.idea/rdd-examples-master.iml" />
     </modules>
   </component>
 </project>

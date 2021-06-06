@@ -73,3 +73,40 @@ if __name__ == '__main__':
 
 # spark-submit --packages "org.apache.hadoop:hadoop-aws:2.7.4" dataframe/ingestion/files/csv_df.py
 # spark-submit --packages org.apache.hadoop:hadoop-aws:2.7.4 csv_df.py
+
+'''
+root
+ |-- id: integer (nullable = true)
+ |-- has_debt: boolean (nullable = true)
+ |-- has_financial_dependents: boolean (nullable = true)
+ |-- has_student_loans: boolean (nullable = true)
+ |-- income: double (nullable = true)
+
++---+--------+------------------------+-----------------+-------+
+| id|has_debt|has_financial_dependents|has_student_loans| income|
++---+--------+------------------------+-----------------+-------+
+|101|   false|                    true|             true|60000.0|
+|102|    true|                    true|            false|50000.0|
+|103|    true|                    true|            false|55000.0|
+|104|    true|                   false|            false|65000.0|
++---+--------+------------------------+-----------------+-------+
+
+Creating dataframe ingestion CSV file using 'SparkSession.read.csv()',
+Number of partitions = 1
+root
+ |-- id: integer (nullable = true)
+ |-- has_debt: boolean (nullable = true)
+ |-- has_financial_dependents: boolean (nullable = true)
+ |-- has_student_loans: boolean (nullable = true)
+ |-- income: integer (nullable = true)
+
++---+--------+------------------------+-----------------+------+
+| id|has_debt|has_financial_dependents|has_student_loans|income|
++---+--------+------------------------+-----------------+------+
+|101|   false|                    true|             true| 60000|
+|102|    true|                    true|            false| 50000|
+|103|    true|                    true|            false| 55000|
+|104|    true|                   false|            false| 65000|
++---+--------+------------------------+-----------------+------+
+
+'''
