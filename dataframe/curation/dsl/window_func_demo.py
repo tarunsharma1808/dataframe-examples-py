@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
     financeDf\
         .withColumn("Date", to_date(from_unixtime(unix_timestamp("Date", "MM/dd/yyyy"))))\
-        .withColumn("RollingAvg", avg("Amount").over(accNumPrev4WindowSpec))\
+        .withColumn("CumulativeSum", sum("Amount").over(accNumPrev4WindowSpec))\
         .show(20, False)
 
     productList = [
