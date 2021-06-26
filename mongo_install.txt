@@ -7,6 +7,7 @@ sudo apt-get install -y mongodb-org
 sudo systemctl unmask mongodb
 
 # may get error that "apt-get : command not found", possible solution is using 'yum' instead of apt-get, not tested yet
+# possible solution two: make sure you are installing mongo on EC2 and not on EMR cluster.
 
 # Create a mongo doc
 ---------------------------------------
